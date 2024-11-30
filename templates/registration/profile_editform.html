@@ -1,16 +1,16 @@
 {% extends 'accounts_base.html' %}
 
-{% block title %} Edit Your Account {% endblock %}
+{% block title %}{% translate "Edit Your Account' %} {% endblock %}
 
 {% block content %}
-<h1> Edit Your Account</h1>
-<p> Fill this form to edit your account </p>
+<h1> {% translate "Edit Your Account" %} </h1>
+<p>{% translate "Fill this form to edit your account" %} </p>
 
 <form method="post" enctype="multipart/form-data">{% csrf_token %}
     {{ user_form.as_p }}
     {{ profile_form.as_p }}
 
-    <p><input type="submit" value="Save Changes"></p>
+    <p><input type="submit" value="{% translate "Save Changes" %}"></p>
 </form>
 
 {% endblock %}
