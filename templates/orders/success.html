@@ -1,13 +1,18 @@
 {% extends "shop/base.html" %}
+{% load i18n %}
 
-{% block title %} | Order Completed {% endblock title %}
+{% block title %} | {% translate "Order Completed" %} {% endblock title %}
 
 {% block content %}
-<h1> Thank you, Your Order is completed </h1>
+<h1>{% translate "Thank you, your order is completed" %}</h1>
 
-<p><strong> Your order number is {{order.id}}
-
-<a href ="{% url 'shop:product_list' %}" class ="button">Get back to shopping</a>
-</strong></p>
+<p>
+  <strong>
+    {% translate "Your order number is" %} {{ order.id }}
+    <a href="{% url 'shop:product_list' %}" class="button">
+      {% translate "Get back to shopping" %}
+    </a>
+  </strong>
+</p>
 
 {% endblock content %}
