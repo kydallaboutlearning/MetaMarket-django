@@ -103,9 +103,10 @@ def CreateOrderView(request):
 def admin_order_detail(request,order_id):
      #getting the order
      order = get_object_or_404(Order,id = order_id)
-     word = _('Coupon')
+     word1 = _('Coupon')
+     word2 = _("discount")
      #returning the html template
-     return render(request, 'admin/orders/order/detail.html',{'order':order},{'word':word})
+     return render(request, 'admin/orders/order/detail.html',{'order':order},{'word1':word1, 'word2':word2})
 
 
 
