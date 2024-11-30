@@ -58,8 +58,9 @@
         <tr>
           <td>
             {% blocktrans with coupon_code=cart.coupon.code discount=cart.coupon.discount %}
-              "{{ coupon_code }}" {% translate "coupon" %} ({{ discount }}% {% translate "off" %})
+              "{{ coupon_code }}" {{word}} ({{ discount }} )
             {% endblocktrans %}
+            {% translate "off" %}
           </td>
           <td colspan="4"></td>
           <td class="num neg">
@@ -92,7 +93,7 @@
     </div>
   {% endif %}
   
-  <p>{% translate "Apply a coupon:" %}</p>
+  <p>{% translate "Apply a " %}{{word}}:</p>
   <form action="{% url "coupons:apply" %}" method="post">
     {{ coupon_apply_form.as_p }}
     <p>
