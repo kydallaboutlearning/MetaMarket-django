@@ -4,6 +4,9 @@ from .models import Question,UserProfile
 from django.conf import settings
 
 
+#importing gettext_lazy for translation
+from django.utils.translation import gettext_lazy as _
+
 User = get_user_model()
 class UsernameLoginForm(forms.Form):
     username = forms.CharField(max_length = 100)
@@ -29,8 +32,8 @@ class UserRegistrationForm(forms.ModelForm):
         fields = ['username','first_name','last_name','email']
     
 
-    password = forms.CharField(max_length = 100,label = 'Password' ,widget = forms.PasswordInput)
-    password2 = forms.CharField(max_length = 200,label = 'Repeat Password',widget = forms.PasswordInput)
+    password = forms.CharField(max_length = 100,label = _('Password') ,widget = forms.PasswordInput)
+    password2 = forms.CharField(max_length = 200,label = _('Repeat Password'),widget = forms.PasswordInput)
 
     
     def clean_password2(self):
@@ -38,14 +41,14 @@ class UserRegistrationForm(forms.ModelForm):
 
         #checking if filled password match then raise a validation error
         if data['password'] != data['password2']:
-            raise forms.ValidationError("Passwords Does'nt match, Try again")
+            raise forms.ValidationError(_("Passwords Does'nt match, Try again"))
         
         return data['password2']
     
     def clean_email(self):
         data = self.cleaned_data
         if User.objects.filter(email=data['email']).exists():
-            raise forms.ValidationError('Email already in use ')
+            raise forms.ValidationError(_('Email already in use '))
         return data['email']
 
 

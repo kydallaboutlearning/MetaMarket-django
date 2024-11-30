@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-11-30 11:26+0100\n"
+"POT-Creation-Date: 2024-11-30 17:20+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,6 +16,58 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: .\Metamarket\settings.py:143
+msgid "English"
+msgstr ""
+
+#: .\Metamarket\settings.py:144
+msgid "Spanish"
+msgstr ""
+
+#: .\Metamarket\settings.py:145
+msgid "French"
+msgstr ""
+
+#: .\Metamarket\urls.py:28
+msgid "accounts/"
+msgstr ""
+
+#: .\Metamarket\urls.py:31
+msgid "cart/"
+msgstr ""
+
+#: .\Metamarket\urls.py:32
+msgid "payment/"
+msgstr ""
+
+#: .\Metamarket\urls.py:33
+msgid "orders/"
+msgstr ""
+
+#: .\Metamarket\urls.py:34
+msgid "coupon/"
+msgstr ""
+
+#: .\Metamarket\urls.py:35
+msgid "admin/"
+msgstr ""
+
+#: .\Metamarket\urls.py:36
+msgid "__debug__/"
+msgstr ""
+
+#: .\Metamarket\urls.py:48
+msgid "payment/webhook/"
+msgstr ""
+
+#: .\shop\urls.py:14
+msgid "<slug:category_slug>"
+msgstr ""
+
+#: .\shop\urls.py:15
+msgid "<int:id>/<slug:slug>/"
+msgstr ""
 
 #: .\templates\orders\create_order.html:5
 #: .\templates\orders\create_order.html:9
@@ -45,10 +97,13 @@ msgstr "Total"
 msgid "Place order"
 msgstr "Passer la commande"
 
-#: .\templates\shop\base.html:8
 #: .\templates\shop\base.html:13
 msgid "Meta Market"
 msgstr "Marché Méta"
+
+#: .\templates\shop\base.html:30
+msgid "Welcome"
+msgstr ""
 
 #: .\templates\shop\base.html:42
 msgid "Your cart"
@@ -88,3 +143,11 @@ msgstr "Les personnes ayant acheté ceci ont également acheté"
 #: .\templates\shop\product\detail.html:46
 msgid "No recommendations available"
 msgstr "Aucune recommandation disponible"
+
+#: .\templates\shop\product\list.html:8
+msgid "Categories"
+msgstr ""
+
+#: .\templates\shop\product\list.html:23
+msgid "Products"
+msgstr ""
