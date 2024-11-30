@@ -1,15 +1,15 @@
 {% extends 'accounts_base.html' %}
-{% block title %} | Logout {% endblock title %}
+{% block title %} | {% translate "Logout" %} {% endblock title %}
 
 {% block content %}
-<h1> Log Out </h1>
+<h1> {% translate "Log Out" %} </h1>
 
-<p> Are You sure wanna logout ?
+<p> {% translate "Are You sure wanna logout ?" %}
 
     <br>
     <br>
     <br>
-      If yes click the button below, if no <a href="{% url 'shop:product_list' %}">Get back to shopping</a>
+      {% "If yes click the button below, if no" %} <a href="{% url 'shop:product_list' %}">{% translate "Get back to shopping" %}</a>
 </p>
 <form id="logout-form" method="post" action="{% url 'accounts:logout' %}">
     {% csrf_token %}
