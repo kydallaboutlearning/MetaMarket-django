@@ -1,0 +1,81 @@
+{% extends 'accounts_base.html' %}
+
+{% block title %} | Registration {% endblock title %}
+
+{% block content %}
+<h1> Create Your Account</h1>
+
+{% if user_form.errors %}
+<p class ="errornote">
+    Pls correct the error(s)  below. 
+       </p>
+{% else %}
+<p>Fill the form below to create your MetaMarket Account </p>
+{% endif %}
+
+
+<form method="post">{% csrf_token %}
+ <div>
+    <div class="form-row">
+        {{ user_form.username.errors  }}
+        <p>
+            {{ user_form.username.label_tag}}{{ user_form.username}}</p>
+        </p>
+        {% if user_form.username.help_text %}
+        <div class="help"{% if user_form.username.id_for_label %} id="{{ user_form.username.id_for_label }}_helptext"{% endif %}>{{ user_form.username.help_text|safe }}</div>
+        {% endif %}
+    </div>
+
+        <div class="form-row">
+            {{ user_form.first_name.errors  }}
+            <p>
+                {{ user_form.first_name.label_tag}}{{ user_form.first_name}}</p>
+            </p>
+            {% if user_form.first_name.help_text %}
+            <div class="help"{% if user_form.first_name.id_for_label %} id="{{ user_form.first_name.id_for_label }}_helptext"{% endif %}>{{ user_form.first_name.help_text|safe }}</div>
+            {% endif %}
+            </div>
+            <div class="form-row">
+                {{ user_form.last_name.errors  }}
+                <p>
+                    {{ user_form.last_name.label_tag}}{{ user_form.last_name}}</p>
+                </p>
+                {% if user_form.last_name.help_text %}
+                <div class="help"{% if user_form.last_name.id_for_label %} id="{{ user_form.last_name.id_for_label }}_helptext"{% endif %}>{{ user_form.last_name.help_text|safe }}</div>
+                {% endif %}
+                </div>
+                <div class="form-row">
+                    {{ user_form.email.errors  }}
+                    <p>
+                        {{ user_form.email.label_tag}}{{ user_form.email}}</p>
+                    </p>
+                    {% if user_form.email.help_text %}
+                    <div class="help"{% if user_form.email.id_for_label %} id="{{ user_form.email.id_for_label }}_helptext"{% endif %}>{{ user_form.email.help_text|safe }}</div>
+                    {% endif %}
+                    </div>
+                    <div class="form-row">
+                        {{ user_form.password.errors  }}
+                        <p>
+                            {{ user_form.password.label_tag}}{{ user_form.password}}</p>
+                        </p>
+                        {% if user_form.password.help_text %}
+                        <div class="help"{% if user_form.password.id_for_label %} id="{{ user_form.password.id_for_label }}_helptext"{% endif %}>{{ user_form.password.help_text|safe }}</div>
+                        {% endif %}
+                        </div>
+
+                        <div class="form-row">
+                            {{ user_form.password2.errors  }}
+                            <p>
+                                {{ user_form.password2.label_tag}}{{ user_form.password2}}</p>
+                            </p>
+                            {% if user_form.password2.help_text %}
+                            <div class="help"{% if user_form.password2.id_for_label %} id="{{ user_form.password2.id_for_label }}_helptext"{% endif %}>{{ user_form.password2.help_text|safe }}</div>
+                            {% endif %}
+                            </div>
+       <p> <input type="submit" value="Create my account"></p>
+      
+</div>
+    
+</form>
+
+{% endblock content %}

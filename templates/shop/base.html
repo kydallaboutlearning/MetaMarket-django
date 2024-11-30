@@ -1,0 +1,63 @@
+{% load static %}
+{% load i18n static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% translate "Meta Market" %}{% block title %}{% endblock %}</title>
+    <link href="{% static 'css/base.css' %}" rel="stylesheet">
+</head>
+<body>
+    <div id="header">
+        <a href="/" class="logo">{% translate "Meta Market" %}</a>
+    </div>
+
+    {% if messages %}
+    <div class="alert-container">
+        {% for message in messages %}
+        <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+            {{ message|safe }}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        {% endfor %}
+    </div>
+    {% endif %}
+
+    <div id="subheader">
+        <div id="user-tools">
+            {% if request.user.is_authenticated %}
+            Welcome {{ request.user.first_name|default:request.user.username }},
+            <a href="{% url 'accounts:logout_form' %}">Log-Out</a> |
+            <a href="{% url 'accounts:password_change' %}">Change Your Password</a> |
+            <a href="{% url 'accounts:edit_profile' %}">Edit Your Profile</a>
+            {% else %}
+            <a href="{% url 'accounts:login' %}">Log-in</a>
+            {% endif %}
+        </div>
+        <div class="cart">
+            {% if request.user.is_authenticated %}
+                {% with total_items=cart|length %}
+                {% if total_items > 0 %}
+               {% translate "Your cart" %}:
+                <a href="{% url 'cart:cart_detail' %}">
+                    {% blocktranslate  with total=get_total_price_after_discount count items=total_items %}
+                        {{ items }} item, ${{ total }}
+                    {% plural %}
+                        {{ items }} items, ${{ total }}
+                    {% endblocktranslate %}
+                </a>
+                {% else %}
+                {% translate "Your cart is empty" %}.
+                {% endif %}
+                {% endwith %}
+            {% endif %}
+        </div>
+    </div>
+
+    <div id="content">
+        {% block content %}
+        {% endblock content %}
+    </div>
+</body>
+</html>

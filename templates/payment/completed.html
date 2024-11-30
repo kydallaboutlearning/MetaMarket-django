@@ -1,0 +1,11 @@
+{% extends 'shop/base.html' %}
+
+{% block title %} | Payment Complete {% endblock title %}
+
+{% block content %}
+<h1>Your Payment was sucessful</h1>
+<p> Your payment has been processed successfully. You will receive an email with your order details.</p>
+<p> Thank you for shopping with us 
+    <br><a href="{% url 'shop:product_list' %}"><b>get back to shopping</b></a>
+</p>
+{% endblock %}
