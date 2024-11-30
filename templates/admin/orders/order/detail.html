@@ -98,7 +98,7 @@
                     <tr>
                         <td colspan="3">
                             {% blocktrans with order.coupon.code as coupon_code %}
-                                "{{ coupon_code }}" {% translate "coupon" %}
+                                "{{ coupon_code }}" {{word}}
                             {% endblocktrans %}
                             ({{ order.discount }}% {% translate "off" %})
                         </td>
