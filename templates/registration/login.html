@@ -1,34 +1,39 @@
 {% extends 'accounts_base.html' %}
-{% load static %}
+{% load i18n static %}
 
 <!DOCTYPE html>
 <html>
-   {% block title %} | Login {% endblock title %}
+    {% block title %} | {% translate "Login" %} {% endblock title %}
 
-   {% block content %}
-   {% if form.errors %}
-   <p> <strong> Username and Password didn't match </strong></p>
-<br><p>Pls Try again </p>
-{% else %}
-   <h1> Login to your account</h1>
-   <h2 class="card-title">Fill This form to login</h2>
-   {% endif %}
-<form method="post">
-    {{form.as_p}}
-    <input type="hidden" name="next" value="{{ next }}" />
-    <p><input type="submit" value="Log in"></p>
-
-    {% csrf_token %}
-</form>
-<br>
-<br>
-<br><br>
-<br>
-<br><br>
-<br>
-<br>
-<p><a href="{% url 'accounts:password_reset' %}">Forgot Your Password?</a> New here? <a href="{% url 'accounts:register' %}">Create account</a>
-</div>
-{% endblock content %}
-
-   </html>
+    {% block content %}
+    {% if form.errors %}
+    <p><strong>{% translate "Username and Password didn't match" %}</strong></p>
+    <br>
+    <p>{% translate "Please try again" %}</p>
+    {% else %}
+    <h1>{% translate "Login to your account" %}</h1>
+    <h2 class="card-title">{% translate "Fill this form to login" %}</h2>
+    {% endif %}
+    <form method="post">
+        {{ form.as_p }}
+        <input type="hidden" name="next" value="{{ next }}" />
+        <p><input type="submit" value="{% translate "Log in" %}"></p>
+        {% csrf_token %}
+    </form>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <p>
+        <a href="{% url 'accounts:password_reset' %}">{% translate "Forgot Your Password?" %}</a>
+        {% translate "New here?" %}
+        <a href="{% url 'accounts:register' %}">{% translate "Create account" %}</a>
+    </p>
+    </div>
+    {% endblock content %}
+</html>
