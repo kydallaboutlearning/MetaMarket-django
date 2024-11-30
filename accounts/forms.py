@@ -70,7 +70,7 @@ class UserEditForm(forms.ModelForm):
         if existing_email.exists():
 
             #raising Validation Error
-            return forms.ValidationError('Email already in use')
+            return forms.ValidationError_(('Email already in use'))
         #returning data if email is valid
         return data
    
