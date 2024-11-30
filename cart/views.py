@@ -13,6 +13,7 @@ from shop.recommender import Recommender
 
 
 #importing gettext for translation
+from django.utils.translation import gettext as _
 
 # Create your views here.
 @login_required
