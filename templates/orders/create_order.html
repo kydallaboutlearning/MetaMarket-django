@@ -18,8 +18,8 @@
       {% endfor %}
       {% if cart.coupon %}
         <li>
-          {% blocktrans with code=cart.coupon.code discount=cart.coupon.discount %}
-          "{{ code }}" ({% translate "discount" %}: {{ discount }}% off)
+          {% blocktrans with code=cart.coupon.code word={{word2}} discount=cart.coupon.discount %}
+          "{{ code }}" {{word}} {{ discount }}% off)
           {% endblocktrans %}
           <span class="neg">- ${{ cart.get_discount|floatformat:2 }}</span>
         </li>
