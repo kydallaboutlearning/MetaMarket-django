@@ -3,7 +3,7 @@ from django import forms
 from .models import Order, OrderItem
 
 
-""""Creating a model form from Oder models"""
+""""Creating a model form from Order models"""
 
 class OrderCreateform(forms.ModelForm):
     class Meta:
