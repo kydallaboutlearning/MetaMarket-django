@@ -36,7 +36,7 @@
         <tr>
             <td>
                 {% blocktranslate with code=order.coupon.code discount=order.discount %}
-                "{{ code }}" {% translate "coupon" %} ({{ discount }}% {% translate "off" %})
+                "{{ code }}" off ({{ discount }}% )
                 {% endblocktranslate %}
             </td>
             <td colspan="3"></td>
@@ -51,6 +51,6 @@
 </table>
 <form action="{% url 'payment:process' %}" method="post">
     {% csrf_token %}
-    <input type="submit" value="{% translate "Pay Now" %}">
+    <input type="submit" value="{% translate 'Pay Now' %}">
 </form>
 {% endblock content %}
