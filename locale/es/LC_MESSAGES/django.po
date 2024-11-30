@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-11-30 11:26+0100\n"
-"PO-Revision-Date: 2024-11-30 11:42+0100\n"
-"Last-Translator: \n"
+"PO-Revision-Date: 2024-11-30 16:26+0000\n"
+"Last-Translator: kyd D dev <kydallaboutlearning@gmail.com>\n"
 "Language-Team: \n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
@@ -17,6 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Poedit 3.5\n"
+"X-Translated-Using: django-rosetta 0.10.0\n"
 
 #: .\templates\orders\create_order.html:5
 #: .\templates\orders\create_order.html:9
@@ -46,8 +47,7 @@ msgstr "Total"
 msgid "Place order"
 msgstr "Realizar pedido"
 
-#: .\templates\shop\base.html:8
-#: .\templates\shop\base.html:13
+#: .\templates\shop\base.html:8 .\templates\shop\base.html:13
 msgid "Meta Market"
 msgstr "Mercado Meta"
 
