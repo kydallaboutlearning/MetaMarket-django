@@ -7,11 +7,17 @@ class CouponApplyForm(forms.Form):
 
 
 class Amount_Choice_form(forms.Form):
+    #saving a variable for the translation
+    trans_yes  =  _('Yes')
+    trans_no  =  _('No')
+
+
+
     choices = [
-        ('Yes', 'Yes'),
-        ('No', 'No'),
+        (trans_yes, trans_yes),
+        (trans_no, trans_no),
         ]
-    choice = forms.CharField(label='Choose an Option', widget=forms.RadioSelect(choices=choices))
+    choice = forms.CharField(label=_('Choose an Option'), widget=forms.RadioSelect(choices=choices))
 
 class Amount_form(forms.ModelForm):
     class Meta:
