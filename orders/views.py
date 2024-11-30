@@ -11,6 +11,9 @@ from django.contrib.staticfiles import finders
 from django.http import HttpResponse
 
 
+#import gettext from translation
+from django.utils.translation import gettext as _
+
 #importing requirements for weasyprint
 from .forms import OrderCreateform
 from django.http import HttpResponse
@@ -100,9 +103,9 @@ def CreateOrderView(request):
 def admin_order_detail(request,order_id):
      #getting the order
      order = get_object_or_404(Order,id = order_id)
-
+     word = _('Coupon')
      #returning the html template
-     return render(request, 'admin/orders/order/detail.html',{'order':order})
+     return render(request, 'admin/orders/order/detail.html',{'order':order},{'word':word})
 
 
 
