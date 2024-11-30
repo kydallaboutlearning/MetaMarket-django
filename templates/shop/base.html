@@ -5,7 +5,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% translate "Meta Market" %}{% block title %}{% endblock %}</title>
+    <title>Meta Market{% block title %}{% endblock %}</title>
     <link href="{% static 'css/base.css' %}" rel="stylesheet">
 </head>
 <body>
@@ -27,7 +27,7 @@
     <div id="subheader">
         <div id="user-tools">
             {% if request.user.is_authenticated %}
-            Welcome {{ request.user.first_name|default:request.user.username }},
+            {% translate "Welcome" %} {{ request.user.first_name|default:request.user.username }},
             <a href="{% url 'accounts:logout_form' %}">Log-Out</a> |
             <a href="{% url 'accounts:password_change' %}">Change Your Password</a> |
             <a href="{% url 'accounts:edit_profile' %}">Edit Your Profile</a>
