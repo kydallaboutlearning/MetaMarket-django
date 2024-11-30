@@ -1,5 +1,5 @@
 {% extends "shop/base.html" %}
-{% load i8n static %}
+{% load i18n static %}
 
 {% block title %}
  | {% translate "Checkout" %}
@@ -18,9 +18,9 @@
       {% endfor %}
       {% if cart.coupon %}
         <li>
-          {% blocktranslate with code = cart.coupon.code discount = cart.coupon.discount %}
-          "{{ code }}"({{discount}}% off)
-          {% endblocktranslate %}
+          {% blocktrans with code=cart.coupon.code discount=cart.coupon.discount %}
+          "{{ code }}" ({% translate "discount" %}: {{ discount }}% off)
+          {% endblocktrans %}
           <span class="neg">- ${{ cart.get_discount|floatformat:2 }}</span>
         </li>
       {% endif %}
