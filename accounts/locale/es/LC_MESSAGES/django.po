@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-11-30 17:20+0100\n"
+"POT-Creation-Date: 2024-11-30 20:14+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,6 +18,23 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? "
 "1 : 2;\n"
+
+#: .\accounts\forms.py:35
+msgid "Password"
+msgstr ""
+
+#: .\accounts\forms.py:36
+msgid "Repeat Password"
+msgstr ""
+
+#: .\accounts\forms.py:44
+msgid "Passwords Does'nt match, Try again"
+msgstr ""
+
+#: .\accounts\forms.py:51
+msgid "Email already in use "
+msgstr ""
+
 #: .\accounts\urls.py:18
 msgid "logout_form/user/"
 msgstr ""

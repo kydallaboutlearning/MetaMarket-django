@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: VERSIÓN DEL PAQUETE\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-11-30 17:20+0100\n"
+"POT-Creation-Date: 2024-11-30 20:14+0100\n"
 "PO-Revision-Date: AÑO-MES-DÍA HO:MI+ZONA\n"
 "Last-Translator: NOMBRE COMPLETO <CORREO@DIRECCIÓN>\n"
 "Language-Team: IDIOMA <LL@li.org>\n"
@@ -53,4 +53,12 @@ msgstr ""
 
 #: .\orders\urls.py:15
 msgid "admin/orders/<int:order_id>/pdf/"
+msgstr ""
+
+#: .\orders\views.py:106
+msgid "Coupon"
+msgstr ""
+
+#: .\orders\views.py:107
+msgid "discount"
 msgstr ""
