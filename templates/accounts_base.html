@@ -1,8 +1,12 @@
-{% load static %}
+{% load static %}\
+{% load i18n %}
+
+
+
 <!DOCTYPE html>
 <html>
 <head>
- <title>Accounts{% block title %}{% endblock %}</title>
+ <title>{% translate "Accounts" %} {% block title %}{% endblock %}</title>
  <link href="{% static "css\base.css" %}" rel="stylesheet">
 </head>
 <body>
