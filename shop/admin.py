@@ -42,7 +42,6 @@ class ProductAdmin(TranslatableAdmin):
         'updated',
         )
     
-    #adding prepolutated fields
-    def get_prepopulated_fields(self, request, obj = None):
-        return  {'slug': ('name',)}
+    def get_prepopulated_fields(self, request, obj=None):
+        return {'slug': ('name',)}
 
