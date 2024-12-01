@@ -15,7 +15,7 @@ from pathlib import Path
 # importing decouple for stripe
 
 from decouple import config
-from decouple import Csv
+
 
 
 #importing requirement for translation
@@ -56,7 +56,8 @@ INSTALLED_APPS = [
     'payment.apps.PaymentConfig',
     'coupons.apps.CouponsConfig',
     'celery',
-    'rosetta'
+    'rosetta',
+    'parler',
 ]
 
 MIDDLEWARE = [
@@ -206,3 +207,16 @@ AUTHENTICATION_BACKENDS = [
 if DEBUG:
     INSTALLED_APPS += ['debug_toolbar']
     MIDDLEWARE.insert(0, 'debug_toolbar.middleware.DebugToolbarMiddleware')
+
+#integrating parler settings
+PARLER_LANGUAGES = {
+    None:(
+        {'code' : 'en'},
+        {'code' : 'es'},
+        {'code': 'fr'},
+    ),
+    'default': {
+        'fallbacks': ['en'],
+        'hide_untranslated': False,
+        },
+        }
