@@ -1,34 +1,33 @@
 {% load static %}
-{% load i18n static %}
+{% load i18n %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meta Market{% block title %}{% endblock %}</title>
-    <link href="{% static 'css/base.css' %}" rel="stylesheet">
+    <link href="{% static 'css/check.css' %}" rel="stylesheet">
 </head>
 <body>
     <div id="header">
-        <a href="/" class="logo">{% translate "Meta Market" %}</a>
-    </div>
-    {% get_current_language as LANGUAGE_CODE %}
- {% get_available_languages as LANGUAGES %}
- {% get_language_info_list for LANGUAGES as languages %}
- <div class="languages">
- <p>{% translate "Language" %}:</p>
- <ul class="languages">
- {% for language in languages %}
- <li>
- <a href="/{{ language.code }}/"
- {% if language.code == LANGUAGE_CODE %} class="selected"{% endif %}>
- {{ language.name_local }}
- </a>
- </li>
- {% endfor %}
- </ul>
- </div>
-
+        <a href="/" class="logo">{% translate "My shop" %}</a>
+        {% get_current_language as LANGUAGE_CODE %}
+        {% get_available_languages as LANGUAGES %}
+        {% get_language_info_list for LANGUAGES as languages %}
+        <div class="languages">
+          <p>{% translate "Language" %}:</p>
+          <ul class="languages">
+            {% for language in languages %}
+              <li>
+                <a href="/{{ language.code }}/"
+                {% if language.code == LANGUAGE_CODE %} class="selected"{% endif %}>
+                  {{ language.name_local }}
+                </a>
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
     {% if messages %}
     <div class="alert-container">
         {% for message in messages %}
@@ -75,5 +74,35 @@
         {% block content %}
         {% endblock content %}
     </div>
+</body>
+<footer>
+    <div class="footer-content">
+        <div class="footer-section about">
+            <h4>{% translate "About Meta Market" %}</h4>
+            <p>{% translate "Meta Market is your go-to platform for the best shopping experience!" %}</p>
+        </div>
+        <div class="footer-section links">
+            <h4>{% translate "Quick Links" %}</h4>
+            <ul>
+                <li><a href="{% url 'shop:product_list' %}">{% translate "Home" %}</a></li>
+                <li><a href="#">{% translate "About" %}</a></li>
+                <li><a href=#>{% translate "Contact" %}</a></li>
+                <li><a href="{% url 'cart:cart_detail' %}">{% translate "Shopping Cart" %}</a></li>
+            </ul>
+        </div>
+        <div class="footer-section social">
+            <h4>{% translate "Follow Us" %}</h4>
+            <div class="social-icons">
+                <a href="#" class="facebook">Facebook</a>
+                <a href="#" class="twitter">Twitter</a>
+                <a href="#" class="instagram">Instagram</a>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2024 Meta Market. All rights reserved.</p>
+    </div>
+</footer>
+
 </body>
 </html>
