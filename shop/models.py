@@ -2,19 +2,25 @@
 from django.db import models
 from django.urls import reverse
 
+#importing Parler
+from parler.models import TranslatableModel, TranslatedFields
+
 
 
 """Creating your models here"""
-class Category(models.Model):
+class Category(TranslatableModel):
 
     #registering the models
-    name = models.CharField(max_length=200)
-    slug = models.SlugField(max_length=200,unique=True)
+    translations = TranslatedFields(
+    name = models.CharField(max_length=200),
+    slug = models.SlugField(max_length=200,unique=True),
+    )
 
     #creating meta class to help properly identify
     class Meta:
-        ordering = ['name']
-        indexes = [models.Index(fields=['name']),]
+        #remember ordering in parler is impossible due to how parler store related database(laanguages)
+        # ordering = ['name']
+        # indexes = [models.Index(fields=['name']),]
         verbose_name = 'Category'
         verbose_name_plural = 'Categories'
 
