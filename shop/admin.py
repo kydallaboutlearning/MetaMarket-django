@@ -13,7 +13,7 @@ class CategoryAdmin(TranslatableAdmin):
         return {'slug': ('name',)}
 
 @admin.register(Product)
-class ProductAdmin(admin.ModelAdmin):
+class ProductAdmin(TranslatableAdmin):
     """Adding List Display"""
 
     #list_display helps show which the model fields show in the admin fields 
@@ -43,6 +43,6 @@ class ProductAdmin(admin.ModelAdmin):
         )
     
     #adding prepolutated fields
-
-    prepopulated_fields =  {'slug': ('name',)}
+    def get_prepopulated_fields(self, request, obj = None):
+        return  {'slug': ('name',)}
 
