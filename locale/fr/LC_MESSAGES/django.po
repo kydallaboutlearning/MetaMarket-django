@@ -19,194 +19,179 @@ msgstr ""
 
 #: .\Metamarket\settings.py:143
 msgid "English"
-msgstr ""
+msgstr "Anglais"
 
 #: .\Metamarket\settings.py:144
 msgid "Spanish"
-msgstr ""
+msgstr "Espagnol"
 
 #: .\Metamarket\settings.py:145
 msgid "French"
-msgstr ""
+msgstr "Français"
 
 #: .\Metamarket\urls.py:28
 msgid "accounts/"
-msgstr ""
+msgstr "comptes/"
 
 #: .\Metamarket\urls.py:31
 msgid "cart/"
-msgstr ""
+msgstr "panier/"
 
 #: .\Metamarket\urls.py:32
 msgid "payment/"
-msgstr ""
+msgstr "paiement/"
 
 #: .\Metamarket\urls.py:33
 msgid "orders/"
-msgstr ""
+msgstr "commandes/"
 
 #: .\Metamarket\urls.py:34
 msgid "coupon/"
-msgstr ""
+msgstr "coupon/"
 
 #: .\Metamarket\urls.py:35
 msgid "admin/"
-msgstr ""
+msgstr "admin/"
 
 #: .\Metamarket\urls.py:36
 msgid "__debug__/"
-msgstr ""
+msgstr "__debug__/"
 
 #: .\Metamarket\urls.py:48
 msgid "payment/webhook/"
-msgstr ""
+msgstr "paiement/webhook/"
 
 #: .\shop\urls.py:14
 msgid "<slug:category_slug>"
-msgstr ""
+msgstr "<slug:category_slug>"
 
 #: .\shop\urls.py:15
 msgid "<int:id>/<slug:slug>/"
-msgstr ""
+msgstr "<int:id>/<slug:slug>/"
 
 #: .\templates\admin\orders\order\detail.html:4
 #: .\templates\admin\orders\order\detail.html:10
 #: .\templates\admin\orders\order\detail.html:16
 msgid "Order"
-msgstr ""
+msgstr "Commande"
 
 #: .\templates\admin\orders\order\detail.html:8
 msgid "Home"
-msgstr ""
+msgstr "Accueil"
 
 #: .\templates\admin\orders\order\detail.html:9
 msgid "Orders"
-msgstr ""
+msgstr "Commandes"
 
 #: .\templates\admin\orders\order\detail.html:11
 msgid "Detail"
-msgstr ""
+msgstr "Détail"
 
 #: .\templates\admin\orders\order\detail.html:20
 #, fuzzy
-#| msgid "Your order"
 msgid "Print order"
-msgstr "Votre commande"
+msgstr "Imprimer la commande"
 
 #: .\templates\admin\orders\order\detail.html:26
 msgid "Created"
-msgstr ""
+msgstr "Créé"
 
 #: .\templates\admin\orders\order\detail.html:30
 msgid "Customer"
-msgstr ""
+msgstr "Client"
 
 #: .\templates\admin\orders\order\detail.html:34
 msgid "E-mail"
-msgstr ""
+msgstr "E-mail"
 
 #: .\templates\admin\orders\order\detail.html:38
 msgid "Address"
-msgstr ""
+msgstr "Adresse"
 
 #: .\templates\admin\orders\order\detail.html:45
 msgid "Total amount"
-msgstr ""
+msgstr "Montant total"
 
 #: .\templates\admin\orders\order\detail.html:49
 msgid "Status"
-msgstr ""
+msgstr "Statut"
 
 #: .\templates\admin\orders\order\detail.html:52
 msgid "Paid"
-msgstr ""
+msgstr "Payé"
 
 #: .\templates\admin\orders\order\detail.html:54
 msgid "Pending payment"
-msgstr ""
+msgstr "Paiement en attente"
 
 #: .\templates\admin\orders\order\detail.html:59
 msgid "Stripe payment"
-msgstr ""
+msgstr "Paiement Stripe"
 
 #: .\templates\admin\orders\order\detail.html:72
 msgid "Items bought"
-msgstr ""
+msgstr "Articles achetés"
 
 #: .\templates\admin\orders\order\detail.html:76
-#: .\templates\cart\detail.html:15 .\templates\payment\process.html:12
+#: .\templates\cart\detail.html:15
+#: .\templates\payment\process.html:12
 msgid "Product"
-msgstr ""
+msgstr "Produit"
 
 #: .\templates\admin\orders\order\detail.html:77
-#: .\templates\cart\detail.html:19 .\templates\payment\process.html:13
+#: .\templates\cart\detail.html:19
+#: .\templates\payment\process.html:13
 msgid "Price"
-msgstr ""
+msgstr "Prix"
 
 #: .\templates\admin\orders\order\detail.html:78
-#: .\templates\cart\detail.html:16 .\templates\payment\process.html:14
+#: .\templates\cart\detail.html:16
+#: .\templates\payment\process.html:14
 msgid "Quantity"
-msgstr ""
+msgstr "Quantité"
 
 #: .\templates\admin\orders\order\detail.html:79
 #: .\templates\admin\orders\order\detail.html:111
-#: .\templates\cart\detail.html:72 .\templates\orders\create_order.html:28
-#: .\templates\payment\process.html:15 .\templates\payment\process.html:47
+#: .\templates\cart\detail.html:72
+#: .\templates\orders\create_order.html:28
+#: .\templates\payment\process.html:15
+#: .\templates\payment\process.html:47
 msgid "Total"
 msgstr "Total"
 
 #: .\templates\admin\orders\order\detail.html:93
-#: .\templates\cart\detail.html:54 .\templates\payment\process.html:32
-#, fuzzy
-#| msgid "Total"
+#: .\templates\cart\detail.html:54
+#: .\templates\payment\process.html:32
 msgid "Subtotal"
-msgstr "Total"
-
-#: .\templates\admin\orders\order\detail.html:100
-#, fuzzy, python-format
-#| msgid ""
-#| "\n"
-#| "                        %(items)s item, $%(total)s\n"
-#| "                    "
-#| msgid_plural ""
-#| "\n"
-#| "                        %(items)s items, $%(total)s\n"
-#| "                    "
-msgid ""
-"\n"
-"                                \"%(coupon_code)s\" %(word)s\n"
-"                            "
-msgstr ""
-"\n"
-"                        %(items)s article, $%(total)s\n"
-"                    "
+msgstr "Sous-total"
 
 #: .\templates\admin\orders\order\detail.html:103
 #: .\templates\cart\detail.html:63
 msgid "off"
-msgstr ""
+msgstr "réduction"
 
-#: .\templates\cart\detail.html:5 .\templates\cart\detail.html:10
-#, fuzzy
-#| msgid "Your cart"
+#: .\templates\cart\detail.html:5
+#: .\templates\cart\detail.html:10
 msgid "Your shopping cart"
 msgstr "Votre panier"
 
-#: .\templates\cart\detail.html:14 .\templates\payment\process.html:11
+#: .\templates\cart\detail.html:14
+#: .\templates\payment\process.html:11
 msgid "Image"
-msgstr ""
+msgstr "Image"
 
-#: .\templates\cart\detail.html:17 .\templates\cart\detail.html:43
+#: .\templates\cart\detail.html:17
+#: .\templates\cart\detail.html:43
 msgid "Remove"
-msgstr ""
+msgstr "Supprimer"
 
 #: .\templates\cart\detail.html:18
 msgid "Unit price"
-msgstr ""
+msgstr "Prix unitaire"
 
 #: .\templates\cart\detail.html:37
 msgid "Update"
-msgstr ""
+msgstr "Mettre à jour"
 
 #: .\templates\cart\detail.html:60
 #, fuzzy, python-format
@@ -229,15 +214,15 @@ msgstr "Les personnes ayant acheté ceci ont également acheté"
 
 #: .\templates\cart\detail.html:96
 msgid "Apply a "
-msgstr ""
+msgstr "Appliquer un(e) "
 
 #: .\templates\cart\detail.html:100
 msgid "Apply"
-msgstr ""
+msgstr "Appliquer"
 
 #: .\templates\cart\detail.html:106 .\templates\cart\detail.html:116
 msgid "Continue shopping"
-msgstr ""
+msgstr "Continuer vos achats"
 
 #: .\templates\cart\detail.html:109 .\templates\orders\create_order.html:5
 #: .\templates\orders\create_order.html:9
@@ -273,54 +258,56 @@ msgstr "Passer la commande"
 
 #: .\templates\orders\success.html:4
 msgid "Order Completed"
-msgstr ""
+msgstr "Commande terminée"
 
 #: .\templates\orders\success.html:7
 msgid "Thank you, your order is completed"
-msgstr ""
+msgstr "Merci, votre commande est terminée"
 
 #: .\templates\orders\success.html:11
 #, fuzzy
 #| msgid "Your order"
 msgid "Your order number is"
-msgstr "Votre commande"
+msgstr "Votre numéro de commande est"
 
 #: .\templates\orders\success.html:13 .\templates\payment\completed.html:9
 #: .\templates\registration\logoutform.html:12
 msgid "Get back to shopping"
-msgstr ""
+msgstr "Revenir aux achats"
 
 #: .\templates\payment\cancel.html:3
 msgid "Payment Cancelled"
-msgstr ""
+msgstr "Paiement annulé"
 
 #: .\templates\payment\cancel.html:6
 msgid "Your Payment has been cancelled"
-msgstr ""
+msgstr "Votre paiement a été annulé"
 
 #: .\templates\payment\completed.html:3
 msgid "Payment Complete"
-msgstr ""
+msgstr "Paiement effectué"
 
 #: .\templates\payment\completed.html:6
-msgid "Your Payment was sucessful"
-msgstr ""
+msgid "Your Payment was successful"
+msgstr "Votre paiement a été effectué avec succès"
 
 #: .\templates\payment\completed.html:7
 msgid ""
 "Your payment has been processed successfully. You will receive an email with "
 "your order details"
 msgstr ""
+"Votre paiement a été traité avec succès. Vous recevrez un e-mail avec les "
+"détails de votre commande."
 
 #: .\templates\payment\process.html:4
 #, fuzzy
 #| msgid "Your order"
 msgid "Pay Your Order"
-msgstr "Votre commande"
+msgstr "Payer votre commande"
 
 #: .\templates\payment\process.html:7
 msgid "Order summary"
-msgstr ""
+msgstr "Résumé de la commande"
 
 #: .\templates\payment\process.html:38
 #, fuzzy, python-format
@@ -339,256 +326,265 @@ msgstr ""
 
 #: .\templates\payment\process.html:54
 msgid "Pay Now"
-msgstr ""
+msgstr "Payer maintenant"
 
 #: .\templates\registration\logged_out.html:4
 #: .\templates\registration\logged_out.html:7
 msgid "Logged out"
-msgstr ""
+msgstr "Déconnecté"
 
 #: .\templates\registration\logged_out.html:9
 msgid "You have been successfully logged out."
-msgstr ""
+msgstr "Vous avez été déconnecté avec succès."
 
 #: .\templates\registration\logged_out.html:10
 msgid "You can"
-msgstr ""
+msgstr "Vous pouvez"
 
 #: .\templates\registration\logged_out.html:11
 msgid "log in again"
-msgstr ""
+msgstr "vous reconnecter"
 
 #: .\templates\registration\login.html:6
 msgid "Login"
-msgstr ""
+msgstr "Connexion"
 
 #: .\templates\registration\login.html:10
 msgid "Username and Password didn't match"
-msgstr ""
+msgstr "Le nom d'utilisateur et le mot de passe ne correspondent pas"
 
 #: .\templates\registration\login.html:12
 msgid "Please try again"
-msgstr ""
+msgstr "Veuillez réessayer"
 
 #: .\templates\registration\login.html:14
 msgid "Login to your account"
-msgstr ""
+msgstr "Connectez-vous à votre compte"
 
 #: .\templates\registration\login.html:15
 msgid "Fill this form to login"
-msgstr ""
+msgstr "Remplissez ce formulaire pour vous connecter"
 
 #: .\templates\registration\login.html:20
 msgid "Log in"
-msgstr ""
+msgstr "Se connecter"
 
 #: .\templates\registration\login.html:33
 msgid "Forgot Your Password?"
-msgstr ""
+msgstr "Mot de passe oublié ?"
 
 #: .\templates\registration\login.html:34
 msgid "New here?"
-msgstr ""
+msgstr "Nouveau ici ?"
 
 #: .\templates\registration\login.html:35
 msgid "Create account"
-msgstr ""
+msgstr "Créer un compte"
 
 #: .\templates\registration\logoutform.html:2
 msgid "Logout"
-msgstr ""
+msgstr "Déconnexion"
 
 #: .\templates\registration\logoutform.html:5
 msgid "Log Out"
-msgstr ""
+msgstr "Se déconnecter"
 
 #: .\templates\registration\logoutform.html:7
 msgid "Are You sure wanna logout ?"
-msgstr ""
+msgstr "Êtes-vous sûr de vouloir vous déconnecter ?"
 
 #: .\templates\registration\password_change_done.html:3
-msgid " Password-Changed"
-msgstr ""
+msgid "Password-Changed"
+msgstr "Mot de passe modifié"
 
 #: .\templates\registration\password_change_done.html:6
 msgid "Password Changed"
-msgstr ""
+msgstr "Mot de passe modifié"
 
 #: .\templates\registration\password_change_done.html:7
 msgid "Your Password has been changed successfully"
-msgstr ""
+msgstr "Votre mot de passe a été modifié avec succès"
 
 #: .\templates\registration\password_change_done.html:9
 msgid ">Get back to shopping"
-msgstr ""
+msgstr ">Retourner aux achats"
 
 #: .\templates\registration\password_change_form.html:4
 msgid "Change Your Password"
-msgstr ""
+msgstr "Changer votre mot de passe"
 
 #: .\templates\registration\password_change_form.html:12
 #: .\templates\registration\password_reset_confirm.html:18
 msgid "Please correct the error(s) below."
-msgstr ""
+msgstr "Veuillez corriger les erreurs ci-dessous."
 
 #: .\templates\registration\password_change_form.html:15
 msgid ""
 "Please enter your old password for security, then enter your new password "
 "twice for verification."
 msgstr ""
+"Veuillez entrer votre ancien mot de passe pour des raisons de sécurité, puis "
+"votre nouveau mot de passe deux fois pour vérification."
 
 #: .\templates\registration\password_change_form.html:45
 msgid "Change"
-msgstr ""
+msgstr "Changer"
 
 #: .\templates\registration\password_reset_complete.html:4
 msgid "Password Reset Complete"
-msgstr ""
+msgstr "Réinitialisation du mot de passe terminée"
 
 #: .\templates\registration\password_reset_complete.html:7
 msgid "Congrats, Password Reset Complete"
-msgstr ""
+msgstr "Félicitations, réinitialisation du mot de passe terminée"
 
 #: .\templates\registration\password_reset_complete.html:9
 msgid "Your password has been reset successfully. You can"
-msgstr ""
+msgstr "Votre mot de passe a été réinitialisé avec succès. Vous pouvez"
 
 #: .\templates\registration\password_reset_complete.html:9
 #: .\templates\registration\register_done.html:10
 msgid "login"
-msgstr ""
+msgstr "vous connecter"
 
 #: .\templates\registration\password_reset_confirm.html:4
 #: .\templates\registration\password_reset_confirm.html:8
 msgid "Password Reset Confirm"
-msgstr ""
+msgstr "Confirmation de la réinitialisation du mot de passe"
 
 #: .\templates\registration\password_reset_confirm.html:13
 msgid "Please enter your new password twice below:"
-msgstr ""
+msgstr "Veuillez entrer votre nouveau mot de passe deux fois ci-dessous :"
 
 #: .\templates\registration\password_reset_confirm.html:39
 msgid "Change my password"
-msgstr ""
+msgstr "Changer mon mot de passe"
 
 #: .\templates\registration\password_reset_confirm.html:44
 msgid ""
 "Your password reset link was invalid. Probably because it has been used."
 msgstr ""
+"Votre lien de réinitialisation de mot de passe est invalide. Il a "
+"probablement déjà été utilisé."
 
 #: .\templates\registration\password_reset_confirm.html:45
 msgid "Please request a new password reset link"
-msgstr ""
+msgstr "Veuillez demander un nouveau lien de réinitialisation du mot de passe"
 
 #: .\templates\registration\password_reset_confirm.html:46
 msgid "Get another reset link"
-msgstr ""
+msgstr "Obtenir un autre lien de réinitialisation"
 
 #: .\templates\registration\password_reset_done.html:4
 #: .\templates\registration\password_reset_done.html:7
 msgid "Password Reset Sent"
-msgstr ""
+msgstr "Réinitialisation du mot de passe envoyée"
 
 #: .\templates\registration\password_reset_done.html:9
 msgid ""
 "We’ve emailed you instructions for setting your password, if an account "
 "exists with the email you entered. You should receive them shortly."
 msgstr ""
+"Nous vous avons envoyé par email les instructions pour définir votre mot de "
+"passe, si un compte existe avec l'email que vous avez saisi. Vous devriez les "
+"recevoir bientôt."
 
 #: .\templates\registration\password_reset_done.html:10
 msgid ""
 "If you don’t receive an email, please make sure you’ve entered the address "
 "you registered with, and check your spam folder."
 msgstr ""
+"Si vous ne recevez pas d'email, veuillez vérifier que vous avez saisi l'adresse "
+"avec laquelle vous vous êtes inscrit, et consultez votre dossier de spam."
 
 #: .\templates\registration\password_reset_done.html:12
 msgid "Go back to login"
-msgstr ""
+msgstr "Retourner à la connexion"
 
 #: .\templates\registration\password_reset_email.html:3
 msgid "Hello"
-msgstr ""
+msgstr "Bonjour"
 
 #: .\templates\registration\password_reset_email.html:5
 msgid "From "
-msgstr ""
+msgstr "De "
 
 #: .\templates\registration\password_reset_email.html:8
 msgid "You requested a password reset for email"
-msgstr ""
+msgstr "Vous avez demandé une réinitialisation du mot de passe pour l'email"
 
 #: .\templates\registration\password_reset_email.html:8
 msgid "Follow the link below:"
-msgstr ""
+msgstr "Suivez le lien ci-dessous :"
 
 #: .\templates\registration\password_reset_email.html:12
 msgid "Your username, in case you've forgotten:"
-msgstr ""
+msgstr "Votre nom d'utilisateur, au cas où vous l'auriez oublié :"
 
 #: .\templates\registration\password_reset_email.html:14
 msgid "Thanks for using "
-msgstr ""
+msgstr "Merci d'utiliser "
 
 #: .\templates\registration\password_reset_form.html:4
 #: .\templates\registration\password_reset_form.html:7
 msgid "Reset Your Password"
-msgstr ""
+msgstr "Réinitialiser votre mot de passe"
 
 #: .\templates\registration\password_reset_form.html:8
 msgid "Fill this form below to reset your password"
-msgstr ""
+msgstr "Remplissez ce formulaire ci-dessous pour réinitialiser votre mot de passe"
 
 #: .\templates\registration\password_reset_form.html:11
 msgid "Send email"
-msgstr ""
+msgstr "Envoyer un email"
 
 #: .\templates\registration\profile_editform.html:6
 msgid "Edit Your Account"
-msgstr ""
+msgstr "Modifier votre compte"
 
 #: .\templates\registration\profile_editform.html:7
 msgid "Fill this form to edit your account"
-msgstr ""
+msgstr "Remplissez ce formulaire pour modifier votre compte"
 
 #: .\templates\registration\profile_editform.html:13
 msgid "Save Changes"
-msgstr ""
+msgstr "Enregistrer les modifications"
 
 #: .\templates\registration\register.html:5
 msgid "Registration"
-msgstr ""
+msgstr "Inscription"
 
 #: .\templates\registration\register.html:8
 msgid "Create Your Account"
-msgstr ""
+msgstr "Créer votre compte"
 
 #: .\templates\registration\register.html:12
 msgid "Pls correct the error(s) below."
-msgstr ""
+msgstr "Veuillez corriger les erreurs ci-dessous."
 
 #: .\templates\registration\register.html:15
 msgid "Fill the form below to create your MetaMarket Account"
-msgstr ""
+msgstr "Remplissez le formulaire ci-dessous pour créer votre compte MetaMarket"
 
 #: .\templates\registration\register.html:80
 msgid "Create my account"
-msgstr ""
+msgstr "Créer mon compte"
 
 #: .\templates\registration\register_done.html:6
 msgid "Account Created successfully"
-msgstr ""
+msgstr "Compte créé avec succès"
 
 #: .\templates\registration\register_done.html:8
 msgid "Congrats"
-msgstr ""
+msgstr "Félicitations"
 
 #: .\templates\registration\register_done.html:8
 msgid "Your account has been successfully created."
-msgstr ""
+msgstr "Votre compte a été créé avec succès."
 
 #: .\templates\registration\register_done.html:10
 msgid "Now you can now"
-msgstr ""
+msgstr "Maintenant, vous pouvez"
 
 #: .\templates\shop\base.html:13
 msgid "Meta Market"
@@ -596,7 +592,7 @@ msgstr "Marché Méta"
 
 #: .\templates\shop\base.html:30
 msgid "Welcome"
-msgstr ""
+msgstr "Bienvenue"
 
 #: .\templates\shop\base.html:42
 msgid "Your cart"
@@ -631,8 +627,8 @@ msgstr "Aucune recommandation disponible"
 
 #: .\templates\shop\product\list.html:8
 msgid "Categories"
-msgstr ""
+msgstr "Catégories"
 
 #: .\templates\shop\product\list.html:23
 msgid "Products"
-msgstr ""
+msgstr "Produits"
