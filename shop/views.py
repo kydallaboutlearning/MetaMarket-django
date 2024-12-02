@@ -43,7 +43,7 @@ def product_details(request,id,slug):
     product = get_object_or_404(Product,
                                 id=id,
                                 translations__language_code = language,
-                                translation__slug=slug,
+                                translations__slug=slug,
                                 available=True)
     cart_product_form = CartAddProductForm()
     cart = Cart(request)
