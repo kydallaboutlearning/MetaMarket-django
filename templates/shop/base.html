@@ -17,7 +17,7 @@
         {% get_available_languages as LANGUAGES %}
         {% get_language_info_list for LANGUAGES as languages %}
         <div class="languages">
-          <p>{% translate "Language" %}:</p>
+          <p>{% translate " Change Language" %}:</p>
           <ul class="languages">
             {% for language in languages %}
               <li>
@@ -41,22 +41,23 @@
     </div>
     {% endif %}
 
-    <div id="subheader">
-        <div id="user-tools">
+    <div id="header-right">
+        <!-- User Greeting -->
+        <div class="user-greeting">
             {% if request.user.is_authenticated %}
-            {% translate "Welcome" %} {{ request.user.first_name|default:request.user.username }},
-            <a href="{% url 'accounts:logout_form' %}">Log-Out</a> |
-            <a href="{% url 'accounts:password_change' %}">Change Your Password</a> |
-            <a href="{% url 'accounts:edit_profile' %}">Edit Your Profile</a>
-            {% else %}
-            <a href="{% url 'accounts:login' %}">Log-in</a>
+                <span>{% trans "Hello, " %}{{ request.user.first_name|default:request.user.username }}</span>
             {% endif %}
         </div>
+    </div>
+
+    <div id="user-tools">
+       
         <div class="cart">
+           
             {% if request.user.is_authenticated %}
                 {% with total_items=cart|length %}
                 {% if total_items > 0 %}
-               {% translate "Your cart" %}:
+                <span>{% translate "Your cart" %}:</span>
                 <a href="{% url 'cart:cart_detail' %}">
                     {% blocktranslate  with total=get_total_price_after_discount count items=total_items %}
                         {{ items }} item, ${{ total }}
@@ -65,12 +66,31 @@
                     {% endblocktranslate %}
                 </a>
                 {% else %}
-                {% translate "Your cart is empty" %}.
+                <span>{% translate "Your cart is empty" %}.</span>
                 {% endif %}
                 {% endwith %}
             {% endif %}
         </div>
+        <div class="dropdown">
+            <button class="dropbtn">
+                <i class="fas fa-cog"></i> {% trans "Account" %}
+            </button>
+            <div class="dropdown-content">
+                <a href="{% url 'accounts:logout_form' %}">
+                    <i class="fas fa-sign-out-alt"></i> {% trans "Log-Out" %}
+                </a>
+                <a href="{% url 'accounts:password_change' %}">
+                    <i class="fas fa-key"></i> {% trans "Change Password" %}
+                </a>
+                <a href="{% url 'accounts:edit_profile' %}">
+                    <i class="fas fa-edit"></i> {% trans "Edit Profile" %}
+                </a>
+            </div>
+        </div>
     </div>
+    
+          
+    
 
     <div id="content">
         {% block content %}
