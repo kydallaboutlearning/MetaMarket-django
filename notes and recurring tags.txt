@@ -18,3 +18,8 @@ in this for stripe listen --forward-to 127.0.0.1:8000/{file url}
 
 To add translations
 run  django-admin makemessages --all
+
+
+
+#for production and locals 
+python manage.py runserver --settings=educa.settings.local    
