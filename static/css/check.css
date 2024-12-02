@@ -1,0 +1,490 @@
+@import url(//fonts.googleapis.com/css?family=Ubuntu);
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Helvetica', sans-serif;
+    background-color: #f4f7fa;
+    color: #333;
+    transition: all 0.3s ease-in-out;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: normal;
+}
+
+a {
+    text-decoration: none;
+    color: #4e9dff;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #2188c6;
+}
+
+a.button, input[type="submit"] {
+    color: #fff;
+    background: #4e9dff;
+    border-radius: 4px;
+    padding: 10px 20px;
+    font-size: 14px;
+    border: 0;
+    transition: background 0.3s ease;
+}
+
+a.button.light {
+    color: #666;
+    background: #e7e7e7;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+table {
+    width: 100%;
+    border-spacing: 0;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+}
+
+table th, table td {
+    text-align: left;
+    font-size: 14px;
+    padding: 10px;
+    margin: 0;
+}
+
+tbody tr:nth-child(odd) {
+    background: #f7f7f7;
+}
+
+tbody tr.subtotal {
+    background: #e7e7e7;
+}
+
+thead th, tbody tr.total {
+    background: #4e9dff;
+    color: #fff;
+    font-weight: bold;
+}
+
+table.cart img {
+    width: 180px;
+}
+
+tbody td.num {
+    text-align: right;
+}
+
+td input[type="submit"] {
+    font-size: 12px;
+    padding: 4px 10px;
+}
+
+form p label, form p input {
+    float: left;
+    clear: both;
+}
+
+form p label {
+    font-size: 14px;
+    padding-bottom: 4px;
+}
+
+form p input {
+    width: 300px;
+    font-size: 13px;
+    margin-bottom: 10px;
+    padding: 10px 12px;
+    border: 0;
+    background: #f7f7f7;
+    color: #666;
+    border-radius: 4px;
+    transition: background 0.3s ease;
+}
+
+form p input:focus {
+    background: #fff;
+    border: 1px solid #4e9dff;
+}
+
+ul.errorlist {
+    color: #dc1616;
+    font-size: 13px;
+    margin: 0 0 0 10px;
+    padding: 10px 0;
+}
+
+#header {
+    padding: 10px 100px;
+    font-size: 18px;
+    overflow: auto;
+    background: #4e9dff;
+    color: #fff;
+}
+
+#header .logo {
+    font-family: 'Ubuntu', sans-serif;
+    float: left;
+    font-size: 22px;
+}
+
+#subheader {
+    background: #ececec;
+    color: #444;
+    padding: 15px 100px;
+    overflow: auto;
+}
+
+#subheader .cart {
+    float: right;
+    padding-top: 4px;
+}
+
+#content {
+    padding: 0 100px;
+    overflow: hidden;
+}
+
+#sidebar {
+    width: 220px;
+    padding: 30px 20px 0 0;
+    float: left;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin-right: 20px;
+    transition: all 0.3s ease;
+}
+
+#sidebar ul {
+    margin: 0;
+    padding: 12;
+}
+
+#sidebar ul li {
+    margin: 0;
+    list-style: none;
+    padding: 10px 14px;
+}
+
+#sidebar ul li a {
+    display: block;
+    color: #333;
+    padding: 10px 0;
+    transition: color 0.3s ease;
+}
+
+#sidebar ul li.selected {
+    background: #4e9dff;
+    border-radius: 4px;
+}
+
+#sidebar ul li.selected a {
+    color: #fff;
+}
+
+#main {
+    float: left;
+    width: 72%;
+    margin-right: -220px;
+    overflow: hidden;
+}
+.product img {
+    border-radius: 10px;
+    object-fit: cover;
+    max-height: 200px;
+    max-width: fit-content; /* Limit height of images */
+}
+
+.product .price {
+    font-weight: bold;
+    color: #333;
+}
+
+.product-list .item {
+    width: 25%;
+    padding: 10px 20px 10px 0;
+    float: left;
+    text-align: center;
+    line-height: 1.2;
+    transition: transform 0.3s ease;
+}
+
+.product-list .item:hover {
+    transform: scale(1.05);
+}
+
+.product-list .item img {
+    width: 100%;
+    margin-bottom: 8px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.product-list .item img:hover {
+    transform: scale(1.05);
+}
+
+.product-detail {
+    text-align: justify;
+}
+
+.product-detail .price {
+    color: #333;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.product-detail img {
+    width: 40%;
+    float: left;
+    padding: 0 20px 20px 0;
+    border-radius: 8px;
+}
+
+.product-detail h1 {
+    margin-bottom: 0;
+}
+
+.product-detail h2 {
+    margin-top: 10px;
+}
+
+.order-form {
+    float: left;
+}
+
+.order-info {
+    float: right;
+    width: 300px;
+    background: #f7f7f7;
+    padding: 10px 20px;
+    color: #333;
+    border-bottom: 4px solid #4e9dff;
+}
+
+.order-info h3 {
+    color: #4e9dff;
+}
+
+.order-info ul li {
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+}
+
+.order-info p {
+    font-weight: bold;
+    float: right;
+}
+
+.order-info span {
+    float: right;
+}
+
+.neg {
+    color: #dc1616;
+}
+
+.languages {
+    float:right;
+    padding-top:4px;
+    font-size:14px;
+    margin-top: 10px; /* To prevent it from colliding with other elements */
+}
+
+.languages ul {
+    list-style:none;
+    margin:0;
+    padding:0;
+    display: flex; /* Use flexbox for proper alignment */
+    flex-wrap: wrap;
+}
+
+.languages ul li {
+    margin: 0 10px 0 0; /* Add margin between language items */
+    font-size: 14px;
+}
+
+.languages ul li a {
+    color: #333; /* Change link color for visibility */
+    text-decoration: none; /* Remove underline */
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease; /* Add transition for hover effect */
+}
+
+.languages ul li a:hover {
+    background-color: #5993bb; /* Change background on hover */
+    color: #fff; /* White text on hover */
+}
+
+.languages ul li .selected {
+    background-color: #5993bb;
+    color: #fff;
+}
+.recommendations {
+    clear: both;
+}
+
+.recommendations div {
+    float: left;
+}
+
+.recommendations img {
+    width: 200px;
+    border-radius: 8px;
+}
+
+.recommendations p {
+    clear: both;
+}
+
+.recommendations.cart {
+    width: 60%;
+    float: left;
+    overflow: auto;
+}
+
+.recommendations.cart h3 {
+    margin-top: 0;
+}
+
+.recommendations.cart .item {
+    margin-right: 10px;
+}
+
+.recommendations.cart img {
+    width: 120px;
+}
+
+form div.field {
+    font-size: 13px;
+    color: #666;
+    width: 300px;
+    height: 22px;
+    margin-bottom: 10px;
+    padding: 6px 12px;
+    border: 0;
+    background: #f7f7f7;
+    color: #666;
+    border-radius: 4px;
+}
+
+/* Alert message styling */
+.alert-container {
+    margin: 20px;
+    transition: opacity 0.3s ease;
+}
+
+.alert {
+    background-color: #fffae6;
+    border: 1px solid #ffd500;
+    color: #5a5a5a;
+    border-radius: 4px;
+    padding: 15px;
+    margin-bottom: 10px;
+}
+
+.alert.alert-success {
+    background-color: #d4edda;
+    border: 1px solid #c3e6cb;
+    color: #155724;
+}
+
+.alert.alert-danger {
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+    color: #721c24;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.footer-section {
+    max-width: 300px;
+    margin-bottom: 20px;
+}
+
+.footer-section h4 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.footer-section p,
+.footer-section ul {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.footer-section a {
+    text-decoration: none;
+    color: #ddd;
+}
+
+.footer-section a:hover {
+    color: #fff;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+.social-icons a {
+    text-decoration: none;
+    color: #ddd;
+    font-size: 20px;
+}
+
+.social-icons a:hover {
+    color: #4CAF50;
+}
+
+.footer-bottom {
+    background-color: #222;
+    color: #ccc;
+    padding: 10px 0;
+}
+
+.footer-bottom p {
+    margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #sidebar {
+        width: 180px;
+    }
+
+    #content {
+        margin-left: 180px;
+    }
+
+    .products {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+}
