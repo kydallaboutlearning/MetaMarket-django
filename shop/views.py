@@ -27,7 +27,7 @@ def product_list(request,category_slug = None):
     if category_slug:
         category = get_object_or_404(Category, 
                                      translations__language_code = language,
-                                     translation__slug = category_slug)
+                                     translations__slug = category_slug)
         products = products.filter(category = category)
     return render(request,'shop/product/list.html',
                   {'category':category,
