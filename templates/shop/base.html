@@ -6,7 +6,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meta Market{% block title %}{% endblock %}</title>
-    <link href="{% static 'css/check.css' %}" rel="stylesheet">
+    <link href="{% static 'css/base.css' %}" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
 </head>
 <body>
     <div id="header">
@@ -77,32 +79,39 @@
 </body>
 <footer>
     <div class="footer-content">
-        <div class="footer-section about">
-            <h4>{% translate "About Meta Market" %}</h4>
-            <p>{% translate "Meta Market is your go-to platform for the best shopping experience!" %}</p>
+        <div class="footer-section">
+            <h4>{% trans "About Us" %}</h4>
+            <p>
+                {% trans "We are a modern company dedicated to providing the best services and innovative solutions for our clients." %}
+            </p>
         </div>
-        <div class="footer-section links">
-            <h4>{% translate "Quick Links" %}</h4>
+        <div class="footer-section">
+            <h4>{% trans "Quick Links" %}</h4>
             <ul>
-                <li><a href="{% url 'shop:product_list' %}">{% translate "Home" %}</a></li>
-                <li><a href="#">{% translate "About" %}</a></li>
-                <li><a href=#>{% translate "Contact" %}</a></li>
-                <li><a href="{% url 'cart:cart_detail' %}">{% translate "Shopping Cart" %}</a></li>
+                <li><a href="#">{% trans "Home" %}</a></li>
+                <li><a href="#">{% trans "Services" %}</a></li>
+                <li><a href="#">{% trans "Blog" %}</a></li>
+                <li><a href="#">{% trans "Contact" %}</a></li>
             </ul>
         </div>
-        <div class="footer-section social">
-            <h4>{% translate "Follow Us" %}</h4>
+        <div class="footer-section">
+            <h4>{% trans "Follow Us" %}</h4>
             <div class="social-icons">
-                <a href="#" class="facebook">Facebook</a>
-                <a href="#" class="twitter">Twitter</a>
-                <a href="#" class="instagram">Instagram</a>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
             </div>
         </div>
     </div>
     <div class="footer-bottom">
-        <p>&copy; 2024 Meta Market. All rights reserved.</p>
+        <p>
+            {% trans "&copy; 2024 MetaMarket Ecommerce Django | Built by " %}KYD-DEV
+            <a href="#">Visit my Github</a>
+        </p>
     </div>
 </footer>
+
 
 </body>
 </html>
