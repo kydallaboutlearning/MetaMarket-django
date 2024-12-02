@@ -5,6 +5,8 @@ from django.urls import reverse
 #importing Parler
 from parler.models import TranslatableModel, TranslatedFields
 
+from django.utils.translation import gettext_lazy as _
+
 
 
 """Creating your models here"""
@@ -55,6 +57,10 @@ class Product(TranslatableModel):
     def check_availability(self):
         if self.Product.amount_available <= 0:
             self.Product.available = False
+    
+    def __str__(self):
+        # Use safe fallback if no translation is available
+        return self.safe_translation_getter('name', default=_("Unnamed product"))
     
     #adding an order
     class Meta:
