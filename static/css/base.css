@@ -117,9 +117,25 @@ ul.errorlist {
 
 
 #header {
-    padding:10px 100px;
+    padding:25px 100px;
     font-size:18px;
     overflow:auto;
+    background-color: #EDEADE;
+}
+#header-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 0;
+    font-weight: bolder;
+    font-size: 20px;
+    
+}
+/* User Greeting */
+.user-greeting span {
+    font-size: 16px;
+    color: #555;
+    padding:20px;
 }
 
 #subheader {
@@ -146,12 +162,91 @@ ul.errorlist {
     padding:0 25px;
     overflow:hidden;
 }
+/* Main container styling */
+#user-tools {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* Align items to the right */
+    gap: 20px; /* Space between each section */
+}
+
+/* Styling for the greeting message */
+.user-info {
+    margin-right: auto; /* Push user info to the left */
+    font-size: 16px;
+}
+
+/* Styling for the cart */
+.cart {
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Space between text and link */
+}
+
+.cart a {
+    text-decoration: none;
+    color: #007bff; /* Bootstrap blue for links */
+    font-weight: bold;
+}
+
+.cart span {
+    color: #333; /* Darker text for "Your cart:" */
+}
+
+/* Dropdown styling */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    background-color: transparent;
+    border: none;
+    color: #000;
+    cursor: pointer;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    right: 0; /* Align dropdown to the right */
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+
+/* styling the sidebar */
 
 #sidebar {
     width:220px;
     padding:30px 20px 0 0;
     float:left;
-    ;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin-right: 20px;
+    transition: all 0.3s ease;
 }
 
 #sidebar ul{
@@ -180,7 +275,7 @@ ul.errorlist {
 
 #main {
     float:left;
-    width: 103%;
+    width: 102%;
     margin-right:-290px;
     overflow:hidden;
 }
@@ -285,6 +380,24 @@ ul.errorlist {
     float:left;
     margin:0 0 0 10px;
     font-size:14px;
+}
+
+.languages ul li a {
+    color: #333; /* Change link color for visibility */
+    text-decoration: none; /* Remove underline */
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease; /* Add transition for hover effect */
+}
+
+.languages ul li a:hover {
+    background-color: #5993bb; /* Change background on hover */
+    color: #fff; /* White text on hover */
+}
+
+.languages ul li .selected {
+    background-color: #5993bb;
+    color: #fff;
 }
 
 .languages p {
