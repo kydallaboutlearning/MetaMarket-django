@@ -2,11 +2,14 @@ services:
 
     web:
       build: .
-      command: python /code/Metamarket/manage.py runserver 0.0.0.0:8000
+      command:  python /code/manage.py runserver localhost:8000
+
       restart: always
       volumes:
       - .:/code
       ports:
-      - "8000:8000"
+      - "8080:8000"
       environment:
       - DJANGO_SETTINGS_MODULE=Metamarket.settings.prod
+
+    
