@@ -3,7 +3,7 @@ from .base import *
 
 DEBUG = False
 ADMINS = [
- ('Antonio M', 'email@mydomain.com'),
+ ('KYD', 'kydallaboutlearning@gmail.com'),
 ]
 ALLOWED_HOSTS = ['*']
 
