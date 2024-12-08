@@ -12,4 +12,11 @@ services:
       environment:
       - DJANGO_SETTINGS_MODULE=Metamarket.settings.prod
 
-    
+    db:
+      image: postgres:16.2
+      restart: always
+      volumes:
+        - ./data/db:/var/lib/postgresql/data
+      environment:
+        - POSTGRES_DB=postgres
+        - POSTGRES_USER=postgres
