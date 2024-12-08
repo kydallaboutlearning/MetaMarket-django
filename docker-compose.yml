@@ -1,17 +1,5 @@
 services:
 
-    web:
-      build: .
-      command:  python /code/manage.py runserver localhost:8000
-
-      restart: always
-      volumes:
-      - .:/code
-      ports:
-      - "8080:8000"
-      environment:
-      - DJANGO_SETTINGS_MODULE=Metamarket.settings.prod
-
     db:
       image: postgres:16.2
       restart: always
@@ -20,3 +8,24 @@ services:
       environment:
         - POSTGRES_DB=postgres
         - POSTGRES_USER=postgres
+        - POSTGRES_PASSWORD=postgres
+
+    web:
+      build: .
+      command:  python /code/manage.py runserver localhost:8000
+
+      restart: always
+      volumes:
+        - .:/code
+      ports:
+        - "8080:8000"
+      environment:
+        - DJANGO_SETTINGS_MODULE=Metamarket.settings.prod
+        - POSTGRES_DB=postgres
+        - POSTGRES_USER=postgres
+        - POSTGRES_PASSWORD=postgres
+      
+      depends_on:
+        - db
+
+  
