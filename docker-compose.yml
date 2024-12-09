@@ -11,6 +11,13 @@ services:
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=postgres
 
+  cache:
+
+    image: redis:7.2.4
+    restart: always
+    volumes:
+      - ./data/cache:/data
+
   web:
     build: .
     command: 
@@ -36,3 +43,4 @@ services:
       - DATABASE_URL=postgres://postgres:postgres@db:5432/postgres  # Fixed this line
     depends_on:
       - db
+      - cache
