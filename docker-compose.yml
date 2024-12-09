@@ -1,37 +1,38 @@
 services:
 
-    db:
-      image: postgres:16.2
-      restart: always
-      volumes:
-        - ./data/db:/var/lib/postgresql/data
-      environment:
-        - POSTGRES_DB=postgres
-        - POSTGRES_USER=postgres
-        - POSTGRES_PASSWORD=postgres
+  db:
+    image: postgres:16.2
+    container_name: db
+    restart: always
+    volumes:
+      - ./data/db:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_DB=postgres
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
 
-    web:
-      build: .
-      command:  ["./wait-for-it.sh", 
-                "db:5432",
-                 "--",
-                 "python",
-                 "/code/manage.py runserver localhost:8000",
-                 "runserver",
-                 "0.0.0.0:8000"]
-
-      restart: always
-      volumes:
-        - .:/code
-      ports:
-        - "8080:8000"
-      environment:
-        - DJANGO_SETTINGS_MODULE=Metamarket.settings.prod
-        - POSTGRES_DB=postgres
-        - POSTGRES_USER=postgres
-        - POSTGRES_PASSWORD=postgres
-      
-      depends_on:
-        - db
-
-  
+  web:
+    build: .
+    command: 
+      [
+        "./wait-for-it.sh", 
+        "db:5432", 
+        "--", 
+        "python", 
+        "/code/manage.py", 
+        "runserver", 
+        "0.0.0.0:8000"
+      ]
+    restart: always
+    volumes:
+      - .:/code
+    ports:
+      - "8080:8000"
+    environment:
+      - DJANGO_SETTINGS_MODULE=Metamarket.settings.prod
+      - POSTGRES_DB=postgres
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - DATABASE_URL=postgres://postgres:postgres@db:5432/postgres  # Fixed this line
+    depends_on:
+      - db
