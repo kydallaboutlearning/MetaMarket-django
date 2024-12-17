@@ -1,5 +1,4 @@
 services:
-
   db:
     image: postgres:16.2
     container_name: db
@@ -7,39 +6,40 @@ services:
     volumes:
       - ./data/db:/var/lib/postgresql/data
     environment:
-      - POSTGRES_DB=postgres
-      - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=${POSTGRES_DB}
+      - POSTGRES_USER=${POSTGRES_USER}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
 
   cache:
-
     image: redis:7.2.4
     restart: always
     volumes:
       - ./data/cache:/data
-
-  web:
-    build: .
-    command: 
-      [
-        "./wait-for-it.sh", 
-        "db:5432", 
-        "--", 
-        "uwsgi", 
-        "--ini", 
-        "/code/config/uwsgi/uwsgi.ini", 
-      ]
+  
+  nginx:
+    image: nginx:1.25.5
     restart: always
     volumes:
+      - ./config/nginx:/etc/nginx/templates
       - .:/code
     ports:
-      - "8080:8000"
+      - "80:80"
+    depends_on:
+      - web
+
+  web:
+    restart: always
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    volumes:
+      - .:/build
+    ports:
+      - "8000:8000"
     environment:
-      - DJANGO_SETTINGS_MODULE=Metamarket.settings.prod
-      - POSTGRES_DB=postgres
-      - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=postgres
-      - DATABASE_URL=postgres://postgres:postgres@db:5432/postgres  # Fixed this line
+      - POSTGRES_HOST=db
+    env_file:
+      - .env
     depends_on:
       - db
       - cache
