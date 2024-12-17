@@ -22,7 +22,7 @@ run  django-admin makemessages --all
 
 
 #for production and locals 
-python manage.py runserver --settings=educa.settings.local    
+python manage.py runserver --settings=Metamarket.settings.local    
 
 
 #To start the postgres 
