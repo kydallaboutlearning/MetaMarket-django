@@ -71,9 +71,6 @@ class Product(TranslatableModel):
         #           models.Index(fields = ['name']),
                    models.Index(fields = ['-created']),
                    ]
-
-    def __str__(self):
-        return self.name
     
     #getting absolute url
     def get_absolute_url(self):
