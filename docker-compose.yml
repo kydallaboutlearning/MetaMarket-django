@@ -1,45 +1,39 @@
+
 services:
-  db:
-    image: postgres:16.2
-    container_name: db
-    restart: always
-    volumes:
-      - ./data/db:/var/lib/postgresql/data
+  web:
+    build: .
+    env_file:
+      - .env
     environment:
-      - POSTGRES_DB=${POSTGRES_DB}
-      - POSTGRES_USER=${POSTGRES_USER}
-      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+      DJANGO_SETTINGS_MODULE: Metamarket.settings.prod
+      STRIPE_PUBLISHABLE_KEY: ${STRIPE_PUBLISHABLE_KEY}
+      STRIPE_SECRET_KEY: ${STRIPE_SECRET_KEY}
+      STRIPE_WEBHOOK_SECRET: ${STRIPE_WEBHOOK_SECRET}
+    volumes:
+      - .:/code
+
+  web_migrate:
+    extends:
+      service: web
+    command: python /code/manage.py migrate
+
+  web_run:
+    extends:
+      service: web
+    command: python /code/manage.py runserver 0.0.0.0:8000
+    ports:
+      - "8000:8000"
+    depends_on:
+      - web_migrate
 
   cache:
     image: redis:7.2.4
     restart: always
-    volumes:
-      - ./data/cache:/data
-  
-  nginx:
-    image: nginx:1.25.5
-    restart: always
-    volumes:
-      - ./config/nginx:/etc/nginx/templates
-      - .:/code
-    ports:
-      - "80:80"
-    depends_on:
-      - web
-
-  web:
-    restart: always
-    build:
-      context: ./
-      dockerfile: Dockerfile
-    volumes:
-      - .:/build
-    ports:
-      - "8000:8000"
-    environment:
-      - POSTGRES_HOST=db
     env_file:
       - .env
-    depends_on:
-      - db
-      - cache
+    environment:
+      REDIS_HOST: ${REDIS_HOST}
+      REDIS_PORT: ${REDIS_PORT}
+      REDIS_DATABASE: ${REDIS_DB}
+    volumes:
+      - ./data/cache:/data
