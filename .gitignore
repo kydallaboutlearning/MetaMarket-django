@@ -10,7 +10,7 @@ venv/
 env/
 .venv/
 .env/
-.env.example
+.env
 
 
 # Django
@@ -20,6 +20,8 @@ media/
 staticfiles/
 static/
 local_settings.py
+data/
+
 
 # Docker
 *.tar
